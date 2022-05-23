@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css'>
+
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- Email Script -->
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('VFV9gbCVhYGuLmVm_');
+        })();
+    </script>
+    <script>
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const serviceID = "service_84tjytt";
+                const templateID = "template_00805by";
+
+
+                emailjs.sendForm(serviceID, templateID, this).then(
+                    (res) => {
+                        console.log("Success!", res.status, res.text);
+                        alert("Success!");
+                    },
+                    (error) => {
+                        console.log("FAILED...", error);
+                        alert("FAILED...", error);
+                    }
+                )
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <header>
+        <div class="header-top clearfix">
+            <h1 class="l-left nav-heading"><a href="#firstSection"> &#60; Romik &#47;&#62; </a></h1>
+            <a class="l-right toggle-menu" href="#">
+                <i></i>
+                <i></i>
+                <i></i>
+            </a>
+        </div>
+
+        <nav class="hide">
+            <ul id="menu">
+                <li data-menuanchor="firstSection">
+                    <a href="#firstSection" title="First Section">About</a>
+                </li>
+                <li data-menuanchor="secondSection">
+                    <a href="#secondSection" title="Second Section">Projects</a>
+                </li>
+                <li data-menuanchor="thirdSection">
+                    <a href="#thirdSection" title="Second Section"> Experience</a>
+                </li>
+                <li data-menuanchor="fourthSection">
+                    <a href="#fourthSection" title="Fourth Section"> Education</a>
+                </li>
+                <li data-menuanchor="fifthSection">
+                    <a href="#fifthSection" title="First Slide"> Contact Us</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- //Full Page Sections// -->
+    <div id="fullpage">
+        <section class="vertical-scrolling section-1 ">
+            <div class="d-flex m-auto row xs-column-reverse section-1-content">
+                <div class="profile-img col-md-5 m-auto ">
+                    <div class="img-border shadow-lg">
+                        <div class="img-border-2 ">
+                            <img src="./img/headLogo.png " class="img-fluid " />
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-data col-md-7 m-auto  ">
+                    <div>
+                        <h1 class="section-1-heading">Romik Makavana</h1>
+                    </div>
+                    <p class="section-1-sub-heading">
+                        <span style="opacity: 0.7">I'm a Passionate </span> <span
+                            style="border-bottom: var(--bg-sub-root-color) solid 0.2rem;">Full Stack Web
+                            Developer</span>
+                    </p>
+                    <ul class="section-1-content-list">
+                        <li class=""><a href="#" class="active">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Experience</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a> </li>
+                    </ul>
+                    <ul class="social-link-list">
+                        <li><a href="#"><i class="fa-brands fa-git-alt"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-stack-overflow"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a> </li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="vertical-scrolling section-2">
+            <div class="horizontal-scrolling">
+                <div class="d-flex m-auto row xs-column-reverse ">
+                    <div class="col-sm-12 about-section ">
+                        <h1><i class="fa-brands fa-medium" style="margin-right: 1rem;"></i> What can i do ?
+                            <hr width="100px;" color="#93c5fd" size="2" align="rigth">
+                        </h1>
+                        <p> Utilize my knowledge and skills in the best possible way for the fulfillment of
+                            organizational goals. Always want an
+                            optimization.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-12 edu-section">
+                        <h2><i class="fa-solid fa-graduation-cap" style="margin-right: 1rem;"></i> Education
+                            <hr width="100px;" color="#93c5fd" size="2" align="rigth">
+                        </h2>
+                        <div class="edu-section-list row">
+                            <ul class="col-md-5">
+                                <li>MCA (2022)</li>
+                                <li>B.H gardi Collage - Rajkot</li>
+                                <li>CGPA: 7.17</li>
+                            </ul>
+                            <ul class="col-md-5">
+                                <li>BCA (2020)</li>
+                                <li>Saurashtra University - Rajkot</li>
+                                <li>CGPA: 7.8</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-sm-12 achiev-section">
+                        <h2> <i class="fa-solid fa-star" style="margin-right: 1rem;"></i> ACHIEVEMENTS
+                            <hr width="100px;" color="#93c5fd" size="2" align="rigth">
+                        </h2>
+                        <div class="achiev-section-list row">
+                            <div class="col-md-12">
+                                <div class="achiev-box" style="border-color: #ffbb2c ;">
+
+                                    <p><i class="fa-solid fa-cloud" style="color: #ffbb2c;"></i> 20+ skill badges in GCP
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12">
+                                <div class="achiev-box" style="border-color: #f5a3c9c9 ;">
+
+                                    <p><i class="fa-solid fa-trophy" style="color: #f5a3c9c9;"></i> Rookie Award (Best
+                                        fresher in company) at eHeuristic Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </section>
+        <section class="vertical-scrolling section-2 section-skill-2">
+
+            <div class="horizontal-scrolling skills-secion-2">
+                <div class="d-flex m-auto row xs-column-reverse m-auto ">
+
+
+                    <div class="col-sm-12 skill-section skills-secion-1 m-auto">
+                        <h2 class="m-auto"> <i class="fa-solid fa-code" style="margin-right: 1rem;"></i> Skills
+                            <hr width="100px;" color="#93c5fd" size="2" align="rigth">
+                        </h2>
+                        <div class="skill-section-list row">
+                            <div class="col-sm-6 p-3">
+                                <p>HTML</p>
+                                <div class="container">
+                                    <div class="skills html"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p-3">
+                                <p>CSS / Bootstrap / Tailwind</p>
+                                <div class="container">
+                                    <div class="skills css"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p-3">
+                                <p>Java Script</p>
+                                <div class="container">
+                                    <div class="skills js"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p-3">
+                                <p>PHP / Laravel</p>
+                                <div class="container">
+                                    <div class="skills php"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p-3">
+                                <p>React js</p>
+                                <div class="container">
+                                    <div class="skills react-js"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p-3">
+                                <p>Angular</p>
+                                <div class="container">
+                                    <div class="skills angular"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p-3">
+                                <p>Vue.js</p>
+                                <div class="container">
+                                    <div class="skills vue-js"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 p-3">
+                                <p>phpmyadmin / Mongodb</p>
+                                <div class="container">
+                                    <div class="skills dbms"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-12 exep-section">
+                        <h2> <i class="fa-solid fa-terminal " style="margin-right: 1rem;"></i> Experience
+                            <hr width="100px;" color="#93c5fd" size="2" align="rigth">
+                        </h2>
+                        <div class=" row">
+                            <div class="col-md-12">
+                                <div class="" style="border-color: #ffbb2c ;">
+                                    <ul class="exep-content">
+                                        <li>Web Developer, eHeuristic Solutions, Rajkot (2018 - 21)</li>
+                                        <li>Handling Backend Frontend</li>
+                                        <li>Database Design, Admin Panel - Rest API - Frontend
+                                            Development</li>
+                                        <li> Development to Deployment.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <section class="vertical-scrolling section-3">
+            <div class="pt-4">
+                <h2 class="display-4 pb-5 text-center">Recent Projects</h2>
+            </div>
+            <div class="d-flex m-auto row xs-column-reverse m-auto">
+                <div class="col-md-4">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded card ">
+                        <div class="card-body ">
+                            <div>
+                                <h2 class="card-title "> Support1 </h2>
+                                <blockquote class="blockquote m-3">
+                                    <p class="px-4">Developed Chatbot flow Editor <br /> &nbsp; - like Manychat from
+                                        Facebook <br /> &nbsp; - In R&D also have practice in TotalJs
+                                    </p>
+                                </blockquote>
+                            </div>
+                            <div class="m-auto">
+                                <a href="https://shain.ca/" target="_blank"
+                                    class="btn btn-outline-secondary my-3 p-3 project-btn">View
+                                    Project</a>
+                            </div>
+                            <hr>
+                            <div class="pb-3 project-language-list">
+                                <span>Languages:</span>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Core PHP</p>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Vue JS</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded card ">
+                        <div class="card-body ">
+                            <div>
+                                <h2 class="card-title "> Jeevanveda </h2>
+                                <blockquote class="blockquote m-3">
+                                    <p class="px-4">Online Shopping site for medical products
+                                        <br /> &nbsp; - API : <b>Laravel</b>| Web & Admin : <b>React</b>
+                                    </p>
+                                </blockquote>
+                            </div>
+                            <div class="m-auto">
+                                <a href="http://jeevanveda.in/" target="_blank"
+                                    class="btn btn-outline-secondary my-3 p-3 project-btn">View
+                                    Project</a>
+                            </div>
+                            <hr>
+                            <div class="pb-3 project-language-list">
+                                <span>Languages:</span>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Laravel</p>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">React</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded card ">
+                        <div class="card-body ">
+                            <div>
+                                <h2 class="card-title "> AlCounselor </h2>
+                                <blockquote class="blockquote m-3">
+                                    <p class="px-4">Online Freelancer site
+                                        <br /> &nbsp; - API : <b>Node Js</b> | Frontend : <b>Angular CLI</b>
+                                        <br /> &nbsp; - Admin : <b>Angular Js</b>
+                                    </p>
+                                </blockquote>
+                            </div>
+                            <div class="m-auto">
+                                <a href="https://alcounselor.com/" target="_blank"
+                                    class="btn btn-outline-secondary my-3 p-3 project-btn">View
+                                    Project</a>
+                            </div>
+                            <hr>
+                            <div class="pb-3 project-language-list">
+                                <span>Languages:</span>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Node Js </p>
+
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank"> Angular Js</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded card ">
+                        <div class="card-body ">
+                            <div>
+                                <h2 class="card-title "> BizyFreelancer </h2>
+                                <blockquote class="blockquote m-3">
+                                    <p class="px-4">Online Freelancer site Like Upwork
+                                        <br /> &nbsp; - API : <b>Node Js</b> | Frontend : <b>Angular CLI</b>
+                                    </p>
+                                </blockquote>
+                            </div>
+
+                            <hr>
+                            <div class="pb-3 project-language-list">
+                                <span>Languages:</span>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Node Js </p>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank"> Angular CLI</p>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank"> Angular Js</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded card ">
+                        <div class="card-body ">
+                            <div>
+                                <h2 class="card-title "> HearFon </h2>
+                                <blockquote class="blockquote m-3">
+                                    <p class="px-4">Customer will purchase Hearfon product
+                                        <br /> &nbsp; - Request for schedule the meeting
+                                        <br /> &nbsp; - Clinic consultant approach the customer
+
+                                    </p>
+                                </blockquote>
+                            </div>
+
+                            <hr>
+                            <div class="pb-3 project-language-list">
+                                <span>Languages:</span>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Yii</p>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Angular JS</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-lg p-3 mb-5 bg-white rounded card ">
+                        <div class="card-body ">
+                            <div>
+                                <h2 class="card-title "> Itihad </h2>
+                                <blockquote class="blockquote m-3">
+                                    <p class="px-4">System used to manage their rest details
+                                        <br /> &nbsp; - via customers quickbooks accounts
+                                        <br /> &nbsp; - QuickBooks Online accounting API
+                                        <br /> &nbsp; - used to access QuickBooks companies.
+                                    </p>
+                                </blockquote>
+                            </div>
+                            <hr>
+                            <div class="pb-3 project-language-list">
+                                <span>Languages:</span>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank">Yii </p>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank"> MySql</p>
+                                <p class="badge badge-light card-link bg-secondary rounded text-white" href="#"
+                                    target="_blank"> QuickBooks</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="vertical-scrolling   section-5">
+            <div class=" m-auto  section-5-content">
+
+                <div class="getin-tuch text-left">
+                    <div>
+                        <h1 class="section-5-heading m-auto text-center my-3">Get In Touch</h1>
+
+                    </div>
+                    <div class="row">
+                        <form class="col-md-6 col-sm-9 m-auto m-2" id="contact-form">
+                            <div class="form-group m-3">
+                                <label for="formGroupExampleInput " class="input-label">Name</label>
+                                <input type="text" class="form-control p-3 rounded" name="name"
+                                    id="formGroupExampleInput" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group m-3">
+                                <label for="formGroupExampleInput " class="input-label">Email</label>
+                                <input type="email" class="form-control p-3 rounded" name="userEmail"
+                                    id="formGroupExampleInput" placeholder="enter Email" required>
+                            </div>
+                            <div class="form-group m-3">
+                                <label for="formGroupExampleInput " class="input-label">Subject</label>
+                                <input type="text" class="form-control p-3 rounded" name="subject"
+                                    id="formGroupExampleInput" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group m-3">
+                                <label for="formGroupExampleInput " class="input-label">Massage</label>
+                                <textarea class="form-control p-3 rounded" name="massage"
+                                    id="exampleFormControlTextarea1" rows="2" placeholder="Massage" required></textarea>
+                            </div>
+                            <div class="form-group m-3">
+                                <input type="submit" class="submit-btn input-label btn btn-primary"
+                                    id="formGroupExampleInput2 btn btn-primary " value="Send" />
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div id="footer">Footer</div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js'></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
